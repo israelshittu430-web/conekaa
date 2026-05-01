@@ -1,0 +1,140 @@
+.home-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 5% 40px; /* 👈 TOP padding increased */
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbf8 100%);
+  background-image: radial-gradient(circle at 20% 30%, rgba(46,125,50,0.08), transparent 40%);
+}
+
+
+/* Wrapper for layout */
+.home-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+
+/* LEFT TEXT */
+.home-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #1a1a1a
+}
+
+.highlight {
+  color: #2e7d32;
+}
+.home-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* RIGHT IMAGE */
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 500px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.home-content {
+  animation-delay: 0.2s;
+}
+
+.home-image {
+  animation-delay: 0.4s;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* BUTTONS */
+.home-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.join-bttn {
+  background-color: #2e7d32;
+  padding: 14px 28px;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.join-bttn:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border: 2px solid #2e7d32;
+  padding: 14px 28px;
+  border-radius: 50px;
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #f1f8e9;
+}
+
+/* ADD THIS FOR REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  .home-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-image img {
+    max-width: 300px;
+  }
+}

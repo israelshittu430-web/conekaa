@@ -1,0 +1,103 @@
+/* Container styling */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Pushes logo left, links center, button right */
+  align-items: center;
+  padding: 15px 5%; /* Top/Bottom padding and side breathing room */
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Soft shadow like the reference */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar-logo {
+  height: 40px; 
+  width: auto;
+}
+
+
+/* Middle Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px; /* Space between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #2e7d32; /* Turns green on hover */
+}
+
+/* Green Join Waitlist Button */
+.join-btn {
+  background-color: #2e7d32; /* Company Green */
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px; /* Rounded pill shape */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.join-btn:hover {
+  background-color: #1b5e20; /* Darker green on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  height: 70px;
+}
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    transition: 0.3s;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-button-container {
+    display: none; /* hide button on mobile */
+  }
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  z-index: 1000;
+}
