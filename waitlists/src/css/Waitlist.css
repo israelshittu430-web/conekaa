@@ -72,7 +72,12 @@
   background: white;
   color: #333;
   font-size: 1rem;
+  
 }
+
+
+
+
 
 .submit-btn {
   width: 100%;
@@ -121,6 +126,8 @@
   border: 1px solid rgba(74, 222, 128, 0.3);
 }
 
+
+
 .status-message.error {
   background: rgba(248, 113, 113, 0.15);
   color: #f87171;
@@ -139,14 +146,14 @@
   }
 
   .waitlist-card {
-    width:90%; /* ✅ full width */
-    padding: 30px 20px; /* better spacing */
+    width:90%; 
+    padding: 30px 20px; 
     border-radius: 20px;
       max-width: 600px;
   }
 
   .waitlist-card h2 {
-    font-size: 2rem; /* smaller heading */
+    font-size: 2rem; 
   }
 
   .waitlist-card p {
@@ -154,23 +161,25 @@
     margin-bottom: 25px;
   }
 
-  /* 👇 VERY IMPORTANT */
+
   .input-group {
-    flex-direction: column; /* stack inputs */
+    flex-direction: column; 
     gap: 15px;
     width: 90%;
   }
 
   .input-field {
-    margin-top: 0; /* remove big spacing */
+    margin-top: 0; 
+    
   }
 
   .input-field label {
-    text-align: left; /* better UX */
+    text-align: left; 
   }
-
+  
   .input-field input,
   .input-field select {
+    
     padding: 12px;
     font-size: 0.95rem;
   }

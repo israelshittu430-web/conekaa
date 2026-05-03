@@ -7,14 +7,6 @@ body, html {
 }
 
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.reveal {
-  transform: translateY(60px) scale(0.95);
-}
 /* Fix for the white boxes in error.jpeg */
 * {
     scrollbar-width: none; /* Firefox */

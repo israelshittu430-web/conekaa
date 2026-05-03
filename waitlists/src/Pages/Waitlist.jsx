@@ -27,7 +27,7 @@ const Waitlist  = forwardRef((props, ref) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/waitlist', {
+      const response = await fetch("https://conekaa.onrender.com/api/waitlist", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ const Waitlist  = forwardRef((props, ref) => {
               </div>
               <div className="input-field">
                 <label>I'm interested as</label>
-                <select name='role' value={formData.role} onChange={handleChange}>
+                <select name='role' value={formData.role} onChange={handleChange} >
                   <option value="">Select an option</option>
                   <option value="tenant">Tenant</option>
                   <option value="landlord">Landlord / Owner</option>

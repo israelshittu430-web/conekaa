@@ -6,56 +6,70 @@ const Service = () => {
   const serviceData = [
     {
       icon: <FaSearch />,
-      title: "Search & Discover",
-      desc: "Browse verified properties across Nigeria — apartments, houses, duplexes and commercial spaces."
+      title: "Find Your Home",
+      desc: "Browse thousands of properties with advanced filters and virtual tours.",
+      color: "green"
     },
     {
       icon: <FaWallet />,
       title: "Flexible Payments",
-      desc: "Rent small small (monthly, biannually), full rent, rent-now-pay-later, and mortgage financing."
+      desc: "Rent-to-own, rent now pay later, or pay in installments — you choose.",
+      color: "blue"
     },
     {
-      icon: <FaGlobe />,
-      title: "Fractional Investments",
-      desc: "Own a slice of high-value properties. Invest from any budget and earn returns as the market grows."
+      icon: <FaChartLine />,
+      title: "Invest & Earn",
+      desc: "Start fractional real estate investing from as low as ₦500,000.",
+      color: "purple"
     },
     {
       icon: <FaWrench />,
-      title: "Artisans Corner ",
-      desc: "Access a network of vetted professionals for your home repairs, renovations, and maintenance."
+      title: "Artisans Corner",
+      desc: "Access trusted professionals for repairs and maintenance.",
+      color: "orange"
     },
     {
       icon: <FaBuilding />,
       title: "Property Management",
-      desc: "Seamless digital tools for landlords to manage tenants, collections, and maintenance requests."
+      desc: "Manage tenants, rent, and maintenance digitally.",
+      color: "pink"
     },
     {
       icon: <FaGlobe />,
       title: "Moving Services",
-      desc: "Get connected with reliable logistics partners to make your transition to a new home stress-free."
+      desc: "Reliable logistics partners for stress-free relocation.",
+      color: "cyan"
     }
   ];
 
   return (
-    <section className="services-section reveal"   id="services">
+    <section className="services-section" id="services">
+
       <div className="services-header">
-        <span className="badge">WHAT WE'RE BUILDING</span>
-        <h2>One platform for your <span className="green-text">entire housing journey</span></h2>
+        <h2>Everything You Need in One Platform</h2>
+        <p>
+          From property discovery to management, we've built a complete ecosystem
+          for your housing needs.
+        </p>
       </div>
 
       <div className="services-grid">
-       {serviceData.map((service, index) => (
-  <div
-    className="service-card reveal"
-    key={index}
-    style={{ transitionDelay: `${index * 0.1}s` }}
-  >
-    <div className="icon-box">{service.icon}</div>
-    <h3>{service.title}</h3>
-    <p>{service.desc}</p>
-  </div>
-))}
+        {serviceData.map((service, index) => (
+          <div className="service-card" key={index}>
+            
+            <div className={`icon-box ${service.color}`}>
+              {service.icon}
+            </div>
+
+            <h3>{service.title}</h3>
+            <p>{service.desc}</p>
+
+            
+
+          </div>
+        ))}
       </div>
+
     </section>
   );
 };
